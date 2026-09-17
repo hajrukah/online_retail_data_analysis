@@ -82,3 +82,11 @@ dashboard.
 The next stage of the project is Exploratory Data Analysis (EDA),
 where the cleaned dataset will be analyzed to identify sales,
 customer, product and geographic insights.
+## Cleaned Dataset
+
+The cleaned dataset contains 392,692 rows and 9 columns.
+
+Due to the file size limitation on GitHub, the cleaned Excel dataset
+is hosted on Google Drive.
+
+[Download the Cleaned Dataset](https://docs.google.com/spreadsheets/d/11Ve6e2dgpOYlRJKvNHJAu6LVyuinpAJb/edit?usp=drivesdk&ouid=109913878589781834118&rtpof=true&sd=true)
