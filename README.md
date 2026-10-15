@@ -177,6 +177,9 @@ An interactive Excel EDA dashboard was created containing:
 ### Cleaned Dataset
 
 The cleaned dataset is hosted on Google Sheets because of the large file size.
+
+[View the Cleaned Dataset](https://docs.google.com/spreadsheets/d/11Ve6e2dgpOYlRJKvNHJAu6LVyuinpAJb/edit?usp=sharing&ouid=109913878589781834118&rtpof=true&sd=true))
+
 ## Task 3 — Interactive Dashboard
 
 ### Project Overview
@@ -244,5 +247,3 @@ Online_Retail_Interactive_Dashboard.pbix
 - [x] Task 2 — Exploratory Data Analysis
 - [x] Task 3 — Interactive Dashboard
 - [ ] Task 4 — Final Data Analytics Project
-
-[View the Cleaned Dataset](https://docs.google.com/spreadsheets/d/11Ve6e2dgpOYlRJKvNHJAu6LVyuinpAJb/edit?usp=sharing&ouid=109913878589781834118&rtpof=true&sd=true))
