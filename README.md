@@ -177,5 +177,72 @@ An interactive Excel EDA dashboard was created containing:
 ### Cleaned Dataset
 
 The cleaned dataset is hosted on Google Sheets because of the large file size.
+## Task 3 — Interactive Dashboard
+
+### Project Overview
+
+This task involved building an interactive business intelligence dashboard
+from the cleaned Online Retail dataset.
+
+The dashboard was designed to help users explore sales performance,
+product performance, customer contributions, and geographic revenue.
+
+### Tools Used
+
+- Microsoft Power BI Desktop
+- Power Query
+- DAX
+- Data Visualization
+
+### Key Performance Indicators
+
+The dashboard includes the following KPIs:
+
+- Total Revenue
+- Total Quantity Sold
+- Total Orders
+- Total Customers
+- Total Products
+- Average Order Value
+
+### Dashboard Visualizations
+
+The dashboard contains:
+
+1. Monthly Revenue Trend
+2. Top 10 Countries by Revenue
+3. Top 10 Customers by Revenue
+4. Top 10 Products by Revenue
+5. Top 10 Products by Quantity Sold
+
+### Interactive Features
+
+Three slicers allow users to explore the dataset by:
+
+- Country
+- Invoice Date
+- Product Description
+
+The slicers allow users to investigate how sales performance changes
+across different markets, periods, and products.
+
+### Business Value
+
+The dashboard provides a consolidated view of sales performance
+and helps users identify important markets, high-performing products,
+valuable customers, and changes in revenue over time.
+
+### Project Files
+
+The Power BI dashboard file is named:
+
+Online_Retail_Interactive_Dashboard.pbix
+
+### Project Progress
+
+- [x] Task 1 — Data Cleaning and Preparation
+- [x] Task 2 — Exploratory Data Analysis
+- [x] Task 3 — Interactive Dashboard
+- [ ] Task 4 — Final Data Analytics Project
 
 [View the Cleaned Dataset](https://docs.google.com/spreadsheets/d/11Ve6e2dgpOYlRJKvNHJAu6LVyuinpAJb/edit?usp=sharing&ouid=109913878589781834118&rtpof=true&sd=true))
