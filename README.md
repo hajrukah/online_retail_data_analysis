@@ -1,249 +1,96 @@
-# Online Retail Data Cleaning & Preparation
+# Online Retail Sales Analysis
+### From Data Cleaning to Exploratory Analysis and Interactive Power BI Dashboard
 
 ## Project Overview
+This project follows an end-to-end data analytics workflow using an Online Retail transaction dataset. It covers data cleaning and preparation, exploratory data analysis (EDA), KPI development, and an interactive Power BI dashboard.
 
-This project focuses on cleaning and preparing an Online Retail
-transaction dataset for further exploratory data analysis and
-business intelligence reporting.
+## Problem Statement
+Raw retail transaction data can contain duplicates, cancelled invoices, missing customer identifiers, inconsistent text, and unsuitable data types. Without structured analysis and reporting, it is harder to identify leading products, valuable customers, important markets, and revenue trends. This project prepares the data and presents findings through an interactive dashboard.
 
-The dataset contains information about invoices, products,
-quantities, prices, customers and countries.
+## Dataset Information
+The dataset was sourced from Kaggle's Online Retail dataset.
 
-## Dataset
+The cleaned dataset contains these nine fields:
+`InvoiceNo`, `StockCode`, `Description`, `Quantity`, `InvoiceDate`, `UnitPrice`, `CustomerID`, `Country`, and `Revenue`.
 
-The original dataset was obtained from Kaggle and provided as a CSV
-file.
-
-The original dataset contained 8 columns. During the cleaning and
-preparation process, a Revenue column was created.
-
-## Tools Used
-
-- Microsoft Excel
-- Power Query
-
-## Data Cleaning Process
-
-The dataset was inspected for common data quality issues including:
-
-- Missing values
-- Duplicate records
-- Incorrect data types
-- Cancelled transactions
-- Non-positive quantities
-- Non-positive unit prices
-- Inconsistent text values
-
-## Cleaning Actions
-
-The following transformations were performed using Power Query:
-
-1. Promoted the first row to column headers.
+- **Reported rows:** 392,692
+- **Columns:** 9
+- **Tools:** Microsoft Excel, Power Query, Power BI, DAX
+- **Revenue calculation:** `Quantity Ã UnitPrice`
+**[Open the cleaned dataset on Google Sheets https://docs.google.com/spreadsheets/d/11Ve6e2dgpOYlRJKvNHJAu6LVyuinpAJb/edit?usp=drivesdk&ouid=109913878589781834118&rtpof=true&sd=true
+## Task 1 â Data Cleaning and Preparation
+The dataset was prepared using Microsoft Excel and Power Query. The recorded workflow included:
+1. Promoted the first row to headers.
 2. Reviewed and corrected data types.
 3. Removed duplicate records.
 4. Removed cancelled invoices.
-5. Removed records with missing Customer IDs.
-6. Removed records with non-positive quantities.
-7. Removed records with non-positive unit prices.
+5. Removed records with missing `CustomerID`.
+6. Removed non-positive `Quantity` values.
+7. Removed non-positive `UnitPrice` values.
 8. Trimmed and cleaned text fields.
-9. Performed another duplicate check after cleaning.
-10. Created a Revenue column using Quantity × UnitPrice.
-11. Set Revenue to Decimal Number data type.
+9. Performed an additional duplicate check after text cleaning.
+10. Created `Revenue` using `Quantity Ã UnitPrice`.
+11. Set `Revenue` to a decimal data type.
 
-## Final Dataset
+The final Power Query output was reported as 392,692 rows and 9 columns, with no errors in the final check.
+## Task 2 â Exploratory Data Analysis
+Excel PivotTables and PivotCharts were used to examine monthly revenue trends, top products by revenue and quantity, revenue by country, top customers by revenue, and unusually large transactions.
 
-The cleaned dataset contains:
-
-- 392,692 rows
-- 9 columns
-
-The final columns are:
-
-- InvoiceNo
-- StockCode
-- Description
-- Quantity
-- InvoiceDate
-- UnitPrice
-- CustomerID
-- Country
-- Revenue
-
-No data errors were present in the final cleaned dataset.
-
-## Purpose
-
-The cleaned dataset will be used for exploratory data analysis,
-business insights and the development of an interactive Power BI
-dashboard.
-
-## Next Step
-
-The next stage of the project is Exploratory Data Analysis (EDA),
-where the cleaned dataset will be analyzed to identify sales,
-customer, product and geographic insights.
-## Cleaned Dataset
-
-The cleaned dataset contains 392,692 rows and 9 columns.
-
-Due to the file size limitation on GitHub, the cleaned Excel dataset
-is hosted on Google Drive.
-
-[Download the Cleaned Dataset](https://docs.google.com/spreadsheets/d/11Ve6e2dgpOYlRJKvNHJAu6LVyuinpAJb/edit?usp=drivesdk&ouid=109913878589781834118&rtpof=true&sd=true)
-## Task 2 — Exploratory Data Analysis
-
-### Objective
-
-The objective of this stage was to explore the cleaned Online Retail dataset, identify important trends and patterns, investigate potential anomalies, and generate useful business insights.
-
-### Tools Used
-
-- Microsoft Excel
-- Power Query
-- PivotTables
-- PivotCharts
-- Excel Slicers
-
-### Dataset
-
-The cleaned dataset contains:
-
-- 392,692 rows
-- 9 columns
-- 4,338 customers
-- 3,665 products
-- 37 countries
-
-### Key KPIs
-
-| KPI | Value |
+### Key metrics
+| Metric | Previously calculated value |
 |---|---:|
 | Total Revenue | 8,887,208.89 |
 | Total Quantity Sold | 5,152,002 |
-| Total Orders | 18,532 |
-| Total Customers | 4,338 |
-| Total Products | 3,665 |
-| Total Countries | 37 |
+| Distinct Orders | 18,532 |
+| Distinct Customers | 4,338 |
+| Distinct Product Codes | 3,665 |
+| Countries | 37 |
 | Average Order Value | 479.56 |
 
-### EDA Performed
-
-The analysis examined:
-
-1. Monthly revenue trends
-2. Top 10 products by revenue
-3. Top 10 products by quantity sold
-4. Top 10 countries by revenue
-5. Top 10 customers by revenue
-6. Potential transaction anomalies
-
-### Key Insights
-
-1. The United Kingdom generated approximately 82% of total recorded revenue, showing a strong concentration of revenue in the UK market.
-
-2. Revenue generally increased toward the final quarter of 2011, with November 2011 recording the highest complete monthly revenue at 1,156,205.61.
-
-3. Paper Craft, Little Birdie generated 168,469.60 in revenue, making it the highest-revenue product/description in the analysis.
-
-4. Customer 14646 generated 280,206.02 in revenue, the highest recorded customer revenue.
-
-5. A transaction involving Paper Craft, Little Birdie recorded 80,995 units, which represents a potential anomaly or bulk purchase requiring further investigation.
-
-6. Customer 12346 generated 77,183.60 in revenue from a single order containing 74,215 units, another unusually large transaction that warrants investigation.
-
-7. December 2011 contains data only through December 9, so its revenue should not be interpreted as a complete-month performance.
-
-### Dashboard
-
-An interactive Excel EDA dashboard was created containing:
-
-- KPI summary
-- Monthly revenue trend
-- Top products by revenue
-- Top products by quantity
-- Top countries by revenue
-- Top customers by revenue
-- Interactive slicers
-- Key insights
-- Potential anomalies
-
-### Project Progress
-
-- [x] Task 1 — Data Cleaning & Preparation
-- [x] Task 2 — Exploratory Data Analysis
-- [ ] Task 3 — Interactive Dashboard
-- [ ] Task 4 — Final Data Analytics Project
-
-### Cleaned Dataset
-
-The cleaned dataset is hosted on Google Sheets because of the large file size.
-
-[View the Cleaned Dataset](https://docs.google.com/spreadsheets/d/11Ve6e2dgpOYlRJKvNHJAu6LVyuinpAJb/edit?usp=sharing&ouid=109913878589781834118&rtpof=true&sd=true))
-
-## Task 3 — Interactive Dashboard
-
-### Project Overview
-
-This task involved building an interactive business intelligence dashboard
-from the cleaned Online Retail dataset.
-
-The dashboard was designed to help users explore sales performance,
-product performance, customer contributions, and geographic revenue.
-
-### Tools Used
-
-- Microsoft Power BI Desktop
-- Power Query
-- DAX
-- Data Visualization
-
-### Key Performance Indicators
-
-The dashboard includes the following KPIs:
-
+**Validation note:** Recheck these figures against the final Power BI report before publication, particularly if the source table or filters have changed.
+## Task 3 â Interactive Power BI Dashboard
+The Power BI report includes six KPI cards:
 - Total Revenue
-- Total Quantity Sold
+- Total Quantity
 - Total Orders
 - Total Customers
 - Total Products
 - Average Order Value
 
-### Dashboard Visualizations
+### Visualizations
+- Monthly Revenue Trend
+- Top 10 Countries by Revenue
+- Top 10 Customers by Revenue
+- Top 10 Products by Revenue
+- Top 10 Products by Quantity Sold
 
-The dashboard contains:
-
-1. Monthly Revenue Trend
-2. Top 10 Countries by Revenue
-3. Top 10 Customers by Revenue
-4. Top 10 Products by Revenue
-5. Top 10 Products by Quantity Sold
-
-### Interactive Features
-
-Three slicers allow users to explore the dataset by:
-
+### Interactive slicers
 - Country
 - Invoice Date
 - Product Description
 
-The slicers allow users to investigate how sales performance changes
-across different markets, periods, and products.
+The slicers allow users to explore performance by market, time period, and product.
+## Key Findings
+These findings were recorded during the earlier EDA and should be checked against the final dashboard before submission.
 
-### Business Value
+1. **Revenue concentration:** UK revenue was previously calculated at approximately 7,285,024.64, around 82% of total recorded revenue.
+2. **Monthly performance:** November 2011 revenue was previously calculated at approximately 1,156,205.61. December 2011 is incomplete because the dataset ends on December 9.
+3. **Product performance:** `Paper Craft, Little Birdie` was previously reported at approximately 168,469.60 in revenue.
+4. **Customer contribution:** Customer `14646` was previously reported at approximately 280,206.02 in revenue.
+5. **Potential anomaly:** A transaction involving `Paper Craft, Little Birdie` was reported with 80,995 units. This may be a legitimate bulk purchase and should be investigated rather than automatically labelled an error.
+6. **Period limitation:** December 2011 contains data only through December 9 and should not be compared directly with full months.
 
-The dashboard provides a consolidated view of sales performance
-and helps users identify important markets, high-performing products,
-valuable customers, and changes in revenue over time.
+## Business Recommendations
+- Investigate the drivers of the UK's revenue contribution and assess opportunities in other markets.
+- Review the products and customer activity behind November's revenue peak.
+- Use product findings to inform inventory and merchandising reviews alongside margin and stock availability data.
+- Examine high-value customers' purchasing patterns for retention opportunities.
+- Investigate unusually large transactions to distinguish bulk purchases from data or process issues.
+- Compare monthly performance using complete periods or clearly label partial months.
 
-### Project Files
-
-The Power BI dashboard file is named:
-
-Online_Retail_Interactive_Dashboard.pbix
-
-### Project Progress
-
-- [x] Task 1 — Data Cleaning and Preparation
-- [x] Task 2 — Exploratory Data Analysis
-- [x] Task 3 — Interactive Dashboard
-- [ ] Task 4 — Final Data Analytics Project
+## Limitations
+- Revenue is not profit because costs and margins are not included.
+- Large quantities are potential anomalies, not confirmed errors.
+- The analysis identifies patterns but does not establish their causes.
+- December 2011 is incomplete.
+- Validate all KPI values against the final Power BI model before publication.
